@@ -96,11 +96,45 @@
             <?php } ?>
         </ul>
 
+        <hr>
+
+        <h2>Snack 2</h2>
+
+    <?php
+    /**
+     * Passare come query:
+     * - name (controllo > 3 caratteri)
+     * - mail (controllo se contiene @ e .)
+     * - age (controllo se numero)
+     * 
+     */
+
+    $name = $_GET['name'];
+    $email = $_GET['mail'];
+    $age = $_GET['age'];
+
+    // Verifico se la chiavi  contengono valori
+
+    if(empty($name) || empty($email) || empty($age))   {
+        echo 'Errore, parametri mancanti';        // empty funzione nativa, ritorna true o false
+
+    } elseif((strpos($email, '@') === false) || (strpos($email, '.') === false)) {
+
+        echo 'Accesso negato';
+    } else{
+        echo 'Accesso riuscito';
+    }         
+    ?>
+
+
 
 
 
 
     </main>
+    <hr>
+
+    <h2>Esempi vari</h2>
 
 
 
