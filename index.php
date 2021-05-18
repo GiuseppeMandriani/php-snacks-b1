@@ -118,12 +118,21 @@
     if(empty($name) || empty($email) || empty($age))   {
         echo 'Errore, parametri mancanti';        // empty funzione nativa, ritorna true o false
 
-    } elseif((strpos($email, '@') === false) || (strpos($email, '.') === false)) {
+    } elseif(strlen($name) < 4) {
 
-        echo 'Accesso negato';
+        echo 'Lunghezza nome inferiore a 3 caratteri, incrementare lunghezza';
+
+    } elseif((strpos($email, '@') === false) || (strpos($email, '.') === false)){
+
+        echo 'Caratteri Mancanti nella mail, inserire formato corretto';
+    } elseif( !is_numeric($age)) {      // is_numeric restituisce true se numero e false se stringa
+
+        echo 'Inserire un numero nell\' età';
     } else{
-        echo 'Accesso riuscito';
-    }         
+
+        echo 'Accesso Consentito';
+        
+    }
     ?>
 
 
