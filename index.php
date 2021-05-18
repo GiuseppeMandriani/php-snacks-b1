@@ -145,15 +145,15 @@
      * Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
      */
 
-    $lenghtArr = 15;
+    $lenghtArr = 15;        // Lunghezza Array
 
-    $number_Arr = [];
+    $number_Arr = [];       // Array di numeri random
 
-    $number_Arr2 = [];
+    $number_Arr2 = [];      // Array numeri random 2
 
-    $min = 1;
+    $min = 1;               // Range minimo
 
-    $max = 30;
+    $max = 30;              // Range Max
 
     
 
