@@ -135,6 +135,32 @@
     }
     ?>
 
+    <hr>
+
+    <h2>Snack 3 Bonus</h2>
+
+    <?php
+
+    /**
+     * Creare un array con 15 numeri casuali, tenendo conto che l’array non dovrà contenere lo stesso numero più di una volta
+     */
+
+    $lenghtArr = 15;
+
+    $number_Arr = [];
+
+    while (count($number_Arr) < $lenghtArr){
+        $number = rand(1,30);
+
+        if(!in_array($number, $number_Arr)){
+            $number_Arr[] = $number;
+        }
+    }
+
+    var_dump($number_Arr);
+
+    ?>
+
 
 
 
