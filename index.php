@@ -149,22 +149,60 @@
 
     $number_Arr = [];
 
-    while (count($number_Arr) < $lenghtArr){
-        $number = rand(1,30);
+    $number_Arr2 = [];
+
+    $min = 1;
+
+    $max = 30;
+
+    
+
+    
+
+    // Metodo 1
+
+    // while (count($number_Arr) < $lenghtArr){
+    //     $number = rand(1,30);
+
+
+    //     if(!in_array($number, $number_Arr)){
+    //         $number_Arr[] = $number;
+    //     }
+
+    //     for($i = 0; $i < count($number_Arr); $i++){
+    //         echo $number_Arr[$i];
+            
+    //     }
+    // }
+
+    // var_dump($number_Arr);
+
+    // Metodo 2
+
+    while (count($number_Arr2) < $lenghtArr){
+        $number = rand($min,$max);
+
+        
 
         if(!in_array($number, $number_Arr)){
-            $number_Arr[] = $number;
+            $number_Arr2[] = $number;
         }
+        
     }
 
-    var_dump($number_Arr);
+    var_dump($number_Arr2);
 
     ?>
 
+    <h4>Stampo numeri nella lista</h4>
 
-
-
-
+    <ul>
+        <?php for($i = 0; $i < count($number_Arr2); $i++) {  ?>
+            <li>
+                <span><?php echo $number_Arr2[$i]; ?></span>
+            </li>
+        <?php } ?>
+    </ul>
 
     </main>
     <hr>
