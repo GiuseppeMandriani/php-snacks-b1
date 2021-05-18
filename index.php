@@ -39,12 +39,73 @@
 </head>
 <body>
     <header>
-        <h1>PHP Snack 1</h1>
+        <h1>PHP Snack 1 & Snack 2</h1>
     </header>
+    <hr>
+
+    <main>
+        <h2>Snack 1</h2>
+        <?php
+
+        
+
+        $matches = [
+            [
+                'home_Team' => 'Milan',
+                'guest_Team' =>'Inter',
+                'home_Point' => rand(1,30),
+                'guest_Point' => rand(1,30),
+            ],
+            [
+                'home_Team' => 'Roma',
+                'guest_Team' =>'Lazio',
+                'home_Point' => rand(1,30),
+                'guest_Point' => rand(1,30),
+            ],
+            [
+                'home_Team' => 'Juventus',
+                'guest_Team' =>'Atalanta',
+                'home_Point' => rand(1,30),
+                'guest_Point' => rand(1,30),
+            ],
+            [
+                'home_Team' => 'Napoli',
+                'guest_Team' =>'Benevento',
+                'home_Point' => rand(1,30),
+                'guest_Point' => rand(1,30),
+            ],
+            [
+                'home_Team' => 'Fiorentina',
+                'guest_Team' =>'Sassuolo',
+                'home_Point' => rand(1,30),
+                'guest_Point' => rand(1,30),
+            ],
+        ];
+
+        // for($i = 0; $i < count($matches); $i++){
+        //     var_dump ($matches[$i]);
+        // }
+
+        ?>
+
+        <ul>
+            <?php for ($i = 0; $i < count($matches); $i++) { ?>
+            <li>
+                <span><?php echo $matches[$i]['home_Team'] . ' - ' . $matches[$i]['guest_Team'] . ' | ' . $matches[$i]['home_Point'] . '-' . $matches[$i]['guest_Point']  ?> </span>
+            </li>
+            <?php } ?>
+        </ul>
+
+
+
+
+
+    </main>
 
 
 
     <a href="./prove.php">Esempi prova</a>
+    <a href="./snackvari.php">Snack vari</a>
     
 </body>
 </html>
