@@ -13,7 +13,7 @@
     <h3> 1) Inserire tante parole all'interno  di un array e controllare che la parola passata dall'utente sia presente nell'array (utilizzo query string url)</h3>
 
     <?php
-    $words = ['Casa', 'Pallone', 'Bibicletta', 'Moto']
+    $words = ['Casa', 'Pallone', 'Bibicletta', 'Moto','']
 
     ?>
 
@@ -37,6 +37,8 @@
     <h3> 2) Random number</h3>
     <h5>Numero random è: <?php echo rand(1,50); ?></h5>
     <hr>
+
+    heade
    
 
 

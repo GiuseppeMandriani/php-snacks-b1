@@ -109,22 +109,32 @@
      * 
      */
 
+    // Query string  ?name=Giuseppe&mail=Giuseppe@gm.it&age=32
+
     $name = $_GET['name'];
     $email = $_GET['mail'];
     $age = $_GET['age'];
 
-    // Verifico se la chiavi  contengono valori
+    // Verifico se le chiavi  contengono valori
 
     if(empty($name) || empty($email) || empty($age))   {
         echo 'Errore, parametri mancanti';        // empty funzione nativa, ritorna true o false
 
+        //die() Interrompe lo script, l'esecuzione
+
+
+        // Verifico liunghezza nome
     } elseif(strlen($name) < 4) {
 
         echo 'Lunghezza nome inferiore a 3 caratteri, incrementare lunghezza';
 
+
+        // Verifico presenza di @ e .
     } elseif((strpos($email, '@') === false) || (strpos($email, '.') === false)){
 
         echo 'Caratteri Mancanti nella mail, inserire formato corretto';
+
+        // Verifico se age è un numero o stringa
     } elseif( !is_numeric($age)) {      // is_numeric restituisce true se numero e false se stringa
 
         echo 'Inserire un numero nell\' età';
@@ -180,6 +190,8 @@
     // Metodo 2
 
     while (count($number_Arr2) < $lenghtArr){
+
+        //Gen num random
         $number = rand($min,$max);
 
         
